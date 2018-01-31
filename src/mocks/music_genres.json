@@ -1,0 +1,1027 @@
+[
+  {
+    "Name": "Blues",
+    "Genres": [
+      {
+        "Name": "Acoustic Blues",
+        "Genres": null,
+        "ID": 117
+      },
+      {
+        "Name": "Blues",
+        "Genres": null,
+        "ID": 190
+      },
+      {
+        "Name": "Boogie - Woogie",
+        "Genres": null,
+        "ID": 118
+      },
+      {
+        "Name": "Classic Blues",
+        "Genres": null,
+        "ID": 119
+      },
+      {
+        "Name": "Country Blues",
+        "Genres": null,
+        "ID": 120
+      },
+      {
+        "Name": "Delta Blues",
+        "Genres": null,
+        "ID": 121
+      },
+      {
+        "Name": "Electric Blues",
+        "Genres": null,
+        "ID": 122
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Chill-out",
+    "Genres": [
+      {
+        "Name": "Ambient",
+        "Genres": null,
+        "ID": 95
+      },
+      {
+        "Name": "Chill-out",
+        "Genres": null,
+        "ID": 191
+      },
+      {
+        "Name": "Downtempo",
+        "Genres": null,
+        "ID": 96
+      },
+      {
+        "Name": "Easy Listening",
+        "Genres": null,
+        "ID": 97
+      },
+      {
+        "Name": "Lounge",
+        "Genres": null,
+        "ID": 99
+      },
+      {
+        "Name": "New Age",
+        "Genres": null,
+        "ID": 101
+      },
+      {
+        "Name": "Nu Jazz",
+        "Genres": null,
+        "ID": 102
+      },
+      {
+        "Name": "Trip-hop",
+        "Genres": null,
+        "ID": 106
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Classic",
+    "Genres": [
+      {
+        "Name": "Baroque",
+        "Genres": null,
+        "ID": 177
+      },
+      {
+        "Name": "Chamber",
+        "Genres": null,
+        "ID": 178
+      },
+      {
+        "Name": "Classic",
+        "Genres": null,
+        "ID": 192
+      },
+      {
+        "Name": "Opera",
+        "Genres": null,
+        "ID": 179
+      },
+      {
+        "Name": "Symphony",
+        "Genres": null,
+        "ID": 180
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Country",
+    "Genres": [
+      {
+        "Name": "Bluegrass",
+        "Genres": null,
+        "ID": 125
+      },
+      {
+        "Name": "Country",
+        "Genres": null,
+        "ID": 193
+      },
+      {
+        "Name": "Country Pop",
+        "Genres": null,
+        "ID": 127
+      },
+      {
+        "Name": "Country Rock",
+        "Genres": null,
+        "ID": 128
+      },
+      {
+        "Name": "Honky Tonk",
+        "Genres": null,
+        "ID": 129
+      },
+      {
+        "Name": "Outlaw Country",
+        "Genres": null,
+        "ID": 130
+      },
+      {
+        "Name": "Rockabilly",
+        "Genres": null,
+        "ID": 131
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Electronic",
+    "Genres": [
+      {
+        "Name": "2-step",
+        "Genres": null,
+        "ID": 195
+      },
+      {
+        "Name": "Breakbeat",
+        "Genres": null,
+        "ID": 62
+      },
+      {
+        "Name": "Breakcore",
+        "Genres": null,
+        "ID": 63
+      },
+      {
+        "Name": "Chip Tune",
+        "Genres": null,
+        "ID": 64
+      },
+      {
+        "Name": "Dance - Clubbing",
+        "Genres": null,
+        "ID": 194
+      },
+      {
+        "Name": "Drone Music",
+        "Genres": null,
+        "ID": 65
+      },
+      {
+        "Name": "Dubstep",
+        "Genres": null,
+        "ID": 196
+      },
+      {
+        "Name": "Electro",
+        "Genres": null,
+        "ID": 66
+      },
+      {
+        "Name": "Electronic",
+        "Genres": null,
+        "ID": 197
+      },
+      {
+        "Name": "Electronica",
+        "Genres": null,
+        "ID": 67
+      },
+      {
+        "Name": "Goa Trance",
+        "Genres": null,
+        "ID": 68
+      },
+      {
+        "Name": "Hardcore - Hard Dance",
+        "Genres": null,
+        "ID": 69
+      },
+      {
+        "Name": "House",
+        "Genres": null,
+        "ID": 70
+      },
+      {
+        "Name": "Industrial",
+        "Genres": null,
+        "ID": 71
+      },
+      {
+        "Name": "Jungle - Drum'n'bass",
+        "Genres": null,
+        "ID": 72
+      },
+      {
+        "Name": "Minimal",
+        "Genres": null,
+        "ID": 73
+      },
+      {
+        "Name": "Nu Rave",
+        "Genres": null,
+        "ID": 74
+      },
+      {
+        "Name": "Techno",
+        "Genres": null,
+        "ID": 75
+      },
+      {
+        "Name": "Trance",
+        "Genres": null,
+        "ID": 76
+      },
+      {
+        "Name": "UK Garage(UKG)",
+        "Genres": null,
+        "ID": 77
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Hits",
+    "Genres": [
+      {
+        "Name": "Hits",
+        "Genres": null,
+        "ID": 198
+      },
+      {
+        "Name": "Hits 60's",
+        "Genres": null,
+        "ID": 176
+      },
+      {
+        "Name": "Hits 70's",
+        "Genres": null,
+        "ID": 175
+      },
+      {
+        "Name": "Hits 80's",
+        "Genres": null,
+        "ID": 174
+      },
+      {
+        "Name": "Hits 90's",
+        "Genres": null,
+        "ID": 173
+      },
+      {
+        "Name": "Hits FR",
+        "Genres": null,
+        "ID": 170
+      },
+      {
+        "Name": "Hits UK",
+        "Genres": null,
+        "ID": 171
+      },
+      {
+        "Name": "Hits USA",
+        "Genres": null,
+        "ID": 172
+      },
+      {
+        "Name": "Oldies",
+        "Genres": null,
+        "ID": 214
+      },
+      {
+        "Name": "Top Charts",
+        "Genres": null,
+        "ID": 169
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Jazz",
+    "Genres": [
+      {
+        "Name": "Acid Jazz",
+        "Genres": null,
+        "ID": 107
+      },
+      {
+        "Name": "Bebop",
+        "Genres": null,
+        "ID": 108
+      },
+      {
+        "Name": "Classic Jazz",
+        "Genres": null,
+        "ID": 110
+      },
+      {
+        "Name": "Free Jazz",
+        "Genres": null,
+        "ID": 112
+      },
+      {
+        "Name": "Jazz",
+        "Genres": null,
+        "ID": 199
+      },
+      {
+        "Name": "Jazz Rock",
+        "Genres": null,
+        "ID": 113
+      },
+      {
+        "Name": "Smooth Jazz",
+        "Genres": null,
+        "ID": 236
+      },
+      {
+        "Name": "Swing",
+        "Genres": null,
+        "ID": 116
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Latin",
+    "Genres": [
+      {
+        "Name": "Flamenco",
+        "Genres": null,
+        "ID": 133
+      },
+      {
+        "Name": "Habanera",
+        "Genres": null,
+        "ID": 134
+      },
+      {
+        "Name": "Kumbia",
+        "Genres": null,
+        "ID": 135
+      },
+      {
+        "Name": "Latin",
+        "Genres": null,
+        "ID": 200
+      },
+      {
+        "Name": "Latin Dance",
+        "Genres": null,
+        "ID": 136
+      },
+      {
+        "Name": "Latin Jazz",
+        "Genres": null,
+        "ID": 137
+      },
+      {
+        "Name": "Latin Pop",
+        "Genres": null,
+        "ID": 138
+      },
+      {
+        "Name": "Latin Rock",
+        "Genres": null,
+        "ID": 139
+      },
+      {
+        "Name": "Mariachi",
+        "Genres": null,
+        "ID": 140
+      },
+      {
+        "Name": "Merenge",
+        "Genres": null,
+        "ID": 141
+      },
+      {
+        "Name": "Reggaeton",
+        "Genres": null,
+        "ID": 143
+      },
+      {
+        "Name": "Salsa",
+        "Genres": null,
+        "ID": 144
+      },
+      {
+        "Name": "Samba",
+        "Genres": null,
+        "ID": 213
+      },
+      {
+        "Name": "Tango",
+        "Genres": null,
+        "ID": 145
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Metal",
+    "Genres": [
+      {
+        "Name": "Black Metal",
+        "Genres": null,
+        "ID": 49
+      },
+      {
+        "Name": "Death Metal",
+        "Genres": null,
+        "ID": 50
+      },
+      {
+        "Name": "Gothic Metal",
+        "Genres": null,
+        "ID": 52
+      },
+      {
+        "Name": "Heavy Metal",
+        "Genres": null,
+        "ID": 54
+      },
+      {
+        "Name": "Industrial Metal",
+        "Genres": null,
+        "ID": 55
+      },
+      {
+        "Name": "Metal",
+        "Genres": null,
+        "ID": 201
+      },
+      {
+        "Name": "Metalcore",
+        "Genres": null,
+        "ID": 56
+      },
+      {
+        "Name": "Nu Metal",
+        "Genres": null,
+        "ID": 57
+      },
+      {
+        "Name": "Progressive Metal",
+        "Genres": null,
+        "ID": 59
+      },
+      {
+        "Name": "Thrash Metal",
+        "Genres": null,
+        "ID": 61
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "News - Talk",
+    "Genres": [
+      {
+        "Name": "Arts - Entertainment",
+        "Genres": null,
+        "ID": 233
+      },
+      {
+        "Name": "Business",
+        "Genres": null,
+        "ID": 230
+      },
+      {
+        "Name": "Comedy",
+        "Genres": null,
+        "ID": 234
+      },
+      {
+        "Name": "Health",
+        "Genres": null,
+        "ID": 235
+      },
+      {
+        "Name": "News",
+        "Genres": null,
+        "ID": 226
+      },
+      {
+        "Name": "Politics",
+        "Genres": null,
+        "ID": 231
+      },
+      {
+        "Name": "Religion - Spirituality",
+        "Genres": null,
+        "ID": 228
+      },
+      {
+        "Name": "Sports",
+        "Genres": null,
+        "ID": 229
+      },
+      {
+        "Name": "Talk",
+        "Genres": null,
+        "ID": 227
+      },
+      {
+        "Name": "Weather",
+        "Genres": null,
+        "ID": 232
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Pop-Rock",
+    "Genres": [
+      {
+        "Name": "Britpop",
+        "Genres": null,
+        "ID": 15
+      },
+      {
+        "Name": "Celtic Rock",
+        "Genres": null,
+        "ID": 16
+      },
+      {
+        "Name": "Christian Rock",
+        "Genres": null,
+        "ID": 17
+      },
+      {
+        "Name": "Classic Rock",
+        "Genres": null,
+        "ID": 18
+      },
+      {
+        "Name": "Coldwave",
+        "Genres": null,
+        "ID": 19
+      },
+      {
+        "Name": "Dance Rock",
+        "Genres": null,
+        "ID": 20
+      },
+      {
+        "Name": "Emo",
+        "Genres": null,
+        "ID": 21
+      },
+      {
+        "Name": "Experimental Rock",
+        "Genres": null,
+        "ID": 22
+      },
+      {
+        "Name": "Folk",
+        "Genres": null,
+        "ID": 23
+      },
+      {
+        "Name": "Folktronica",
+        "Genres": null,
+        "ID": 211
+      },
+      {
+        "Name": "Garage Rock",
+        "Genres": null,
+        "ID": 24
+      },
+      {
+        "Name": "Glam Rock",
+        "Genres": null,
+        "ID": 25
+      },
+      {
+        "Name": "Gothic Rock",
+        "Genres": null,
+        "ID": 26
+      },
+      {
+        "Name": "Grunge",
+        "Genres": null,
+        "ID": 27
+      },
+      {
+        "Name": "Hard Rock",
+        "Genres": null,
+        "ID": 28
+      },
+      {
+        "Name": "Indie",
+        "Genres": null,
+        "ID": 29
+      },
+      {
+        "Name": "Industrial Rock",
+        "Genres": null,
+        "ID": 30
+      },
+      {
+        "Name": "Instrumental Rock",
+        "Genres": null,
+        "ID": 31
+      },
+      {
+        "Name": "Kraut-Rock",
+        "Genres": null,
+        "ID": 32
+      },
+      {
+        "Name": "New Wave",
+        "Genres": null,
+        "ID": 34
+      },
+      {
+        "Name": "Noisy",
+        "Genres": null,
+        "ID": 35
+      },
+      {
+        "Name": "Pop",
+        "Genres": null,
+        "ID": 204
+      },
+      {
+        "Name": "Pop Rock",
+        "Genres": null,
+        "ID": 36
+      },
+      {
+        "Name": "Post-rock",
+        "Genres": null,
+        "ID": 37
+      },
+      {
+        "Name": "Power Pop",
+        "Genres": null,
+        "ID": 38
+      },
+      {
+        "Name": "Progressive Rock",
+        "Genres": null,
+        "ID": 39
+      },
+      {
+        "Name": "Psychedelic",
+        "Genres": null,
+        "ID": 40
+      },
+      {
+        "Name": "Psychobilly",
+        "Genres": null,
+        "ID": 41
+      },
+      {
+        "Name": "Punk",
+        "Genres": null,
+        "ID": 42
+      },
+      {
+        "Name": "Rock",
+        "Genres": null,
+        "ID": 210
+      },
+      {
+        "Name": "Rock'n'Roll",
+        "Genres": null,
+        "ID": 203
+      },
+      {
+        "Name": "Shoegazing",
+        "Genres": null,
+        "ID": 44
+      },
+      {
+        "Name": "Ska",
+        "Genres": null,
+        "ID": 45
+      },
+      {
+        "Name": "Southern Rock",
+        "Genres": null,
+        "ID": 46
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Reggae",
+    "Genres": [
+      {
+        "Name": "Dancehall",
+        "Genres": null,
+        "ID": 164
+      },
+      {
+        "Name": "Dub",
+        "Genres": null,
+        "ID": 165
+      },
+      {
+        "Name": "Pop - Reggae",
+        "Genres": null,
+        "ID": 166
+      },
+      {
+        "Name": "Ragga",
+        "Genres": null,
+        "ID": 167
+      },
+      {
+        "Name": "Reggae",
+        "Genres": null,
+        "ID": 202
+      },
+      {
+        "Name": "Roots Reggae",
+        "Genres": null,
+        "ID": 168
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Urban",
+    "Genres": [
+      {
+        "Name": "Dirty South",
+        "Genres": null,
+        "ID": 78
+      },
+      {
+        "Name": "Disco",
+        "Genres": null,
+        "ID": 79
+      },
+      {
+        "Name": "Dub",
+        "Genres": null,
+        "ID": 80
+      },
+      {
+        "Name": "Freestyle",
+        "Genres": null,
+        "ID": 81
+      },
+      {
+        "Name": "Funk",
+        "Genres": null,
+        "ID": 82
+      },
+      {
+        "Name": "Gangsta Rap",
+        "Genres": null,
+        "ID": 83
+      },
+      {
+        "Name": "Gospel",
+        "Genres": null,
+        "ID": 84
+      },
+      {
+        "Name": "Hip-Hop",
+        "Genres": null,
+        "ID": 85
+      },
+      {
+        "Name": "Motown",
+        "Genres": null,
+        "ID": 86
+      },
+      {
+        "Name": "New Soul",
+        "Genres": null,
+        "ID": 87
+      },
+      {
+        "Name": "Rap",
+        "Genres": null,
+        "ID": 89
+      },
+      {
+        "Name": "Rhythm'n'Blues",
+        "Genres": null,
+        "ID": 90
+      },
+      {
+        "Name": "R'n'B",
+        "Genres": null,
+        "ID": 88
+      },
+      {
+        "Name": "Soul",
+        "Genres": null,
+        "ID": 91
+      },
+      {
+        "Name": "Urban",
+        "Genres": null,
+        "ID": 205
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "Various",
+    "Genres": [
+      {
+        "Name": "Children's - Family",
+        "Genres": null,
+        "ID": 181
+      },
+      {
+        "Name": "Christian",
+        "Genres": null,
+        "ID": 182
+      },
+      {
+        "Name": "Christmas",
+        "Genres": null,
+        "ID": 183
+      },
+      {
+        "Name": "Comedy",
+        "Genres": null,
+        "ID": 184
+      },
+      {
+        "Name": "Educational",
+        "Genres": null,
+        "ID": 185
+      },
+      {
+        "Name": "Experimental",
+        "Genres": null,
+        "ID": 208
+      },
+      {
+        "Name": "Folkloric",
+        "Genres": null,
+        "ID": 216
+      },
+      {
+        "Name": "Medieval",
+        "Genres": null,
+        "ID": 207
+      },
+      {
+        "Name": "Miscellaneous",
+        "Genres": null,
+        "ID": 206
+      },
+      {
+        "Name": "Religious",
+        "Genres": null,
+        "ID": 217
+      },
+      {
+        "Name": "Romantic",
+        "Genres": null,
+        "ID": 215
+      },
+      {
+        "Name": "Soundtracks",
+        "Genres": null,
+        "ID": 186
+      },
+      {
+        "Name": "Spiritual",
+        "Genres": null,
+        "ID": 187
+      }
+    ],
+    "ID": null
+  },
+  {
+    "Name": "World",
+    "Genres": [
+      {
+        "Name": "African",
+        "Genres": null,
+        "ID": 146
+      },
+      {
+        "Name": "Arabic",
+        "Genres": null,
+        "ID": 147
+      },
+      {
+        "Name": "Asian",
+        "Genres": null,
+        "ID": 148
+      },
+      {
+        "Name": "Bossa Nova",
+        "Genres": null,
+        "ID": 149
+      },
+      {
+        "Name": "Brazilian",
+        "Genres": null,
+        "ID": 150
+      },
+      {
+        "Name": "Cajun",
+        "Genres": null,
+        "ID": 151
+      },
+      {
+        "Name": "Celtic",
+        "Genres": null,
+        "ID": 152
+      },
+      {
+        "Name": "Creole",
+        "Genres": null,
+        "ID": 153
+      },
+      {
+        "Name": "Ethnic Fusion",
+        "Genres": null,
+        "ID": 154
+      },
+      {
+        "Name": "Fado",
+        "Genres": null,
+        "ID": 188
+      },
+      {
+        "Name": "Hawaiian - Pacific",
+        "Genres": null,
+        "ID": 155
+      },
+      {
+        "Name": "Japanese",
+        "Genres": null,
+        "ID": 156
+      },
+      {
+        "Name": "Jewish",
+        "Genres": null,
+        "ID": 157
+      },
+      {
+        "Name": "Middle Eastern",
+        "Genres": null,
+        "ID": 158
+      },
+      {
+        "Name": "Morna",
+        "Genres": null,
+        "ID": 189
+      },
+      {
+        "Name": "Polka",
+        "Genres": null,
+        "ID": 159
+      },
+      {
+        "Name": "Tribal",
+        "Genres": null,
+        "ID": 160
+      },
+      {
+        "Name": "World",
+        "Genres": null,
+        "ID": 209
+      },
+      {
+        "Name": "Worldbeat",
+        "Genres": null,
+        "ID": 161
+      },
+      {
+        "Name": "Zouk",
+        "Genres": null,
+        "ID": 162
+      }
+    ],
+    "ID": null
+  }
+]

@@ -23,48 +23,41 @@ class Checkbox extends React.Component {
   }
 
   render() {
+    const {name, id, idsOfSelected} = this.props;
     return (
-      <label>
+      <p>
         <input
           type="checkbox"
-          id={this.props.id}
+          id={id}
           name="genres"
-          value={this.props.id}
-          defaultChecked={this.props.selected}
+          value={id}
+          defaultChecked={idsOfSelected.includes(id)}
           onClick={this.handleClick}
         />
-        {this.props.label}
-      </label>
+        <label htmlFor={id}>
+          {name}
+        </label>
+      </p>
     );
   }
 }
 
-function ListItem(props) {
-  const item = props.item;
+function Fieldset(props) {
   return (
-    <li>
-      <Checkbox id={props.id} label={item.Name} selected={props.idsOfSelected.includes(props.id)} onClick={props.onClick} />
-      {Array.isArray(item.Genres) && item.Genres.length > 0 ? <List list={item.Genres} idsOfSelected={props.idsOfSelected} onClick={props.onClick} /> : ''}
-    </li>
-  );
-}
-
-function List(props) {
-  const list = props.list;
-  const listItems = list.map((item) => {
-    const id = item.ID || item.Name.replace(/\s/g,'');
-    return <ListItem
-      key={id}
-      id={id}
-      item={item}
-      idsOfSelected={props.idsOfSelected}
-      onClick={props.onClick}
-    />
-  });
-  return (
-    <ul>
-      {listItems}
-    </ul>
+    <fieldset>
+      <legend>
+        {props.legend}
+      </legend>
+      {props.fields.map((field) =>
+        <Checkbox
+          key={field.ID}
+          id={field.ID}
+          name={field.Name}
+          idsOfSelected={props.idsOfSelected}
+          onClick={props.onClick}
+        />
+      )}
+    </fieldset>
   );
 }
 
@@ -100,11 +93,15 @@ class GenresSelector extends React.Component {
             maximumNbOfSelections={this.props.maximumNbOfSelections}
           />
         </header>
-        <List
-          list={this.props.genres}
-          idsOfSelected={this.state.idsOfSelected}
-          onClick={this.handleClick}
-        />
+        {this.props.genres.map((fieldset) =>
+          <Fieldset
+            key={fieldset.Name.replace(/\s/g,'')}
+            legend={fieldset.Name}
+            fields={fieldset.Genres}
+            idsOfSelected={this.state.idsOfSelected}
+            onClick={this.handleClick}
+          />
+        )}
       </article>
     );
   }

@@ -14,7 +14,7 @@ function Feedback(props) {
 
 function Checkbox(props) {
   return (
-    <label for={props.id}><input type="checkbox" id={props.id} name="genres" value={props.id} />{props.label}</label>
+    <label><input type="checkbox" id={props.id} name="genres" value={props.id} defaultChecked={props.selected} />{props.label}</label>
   );
 }
 
@@ -22,8 +22,8 @@ function ListItem(props) {
   const item = props.item;
   return (
     <li>
-      <Checkbox id={props.id} label={item.Name} />
-      {Array.isArray(item.Genres) && item.Genres.length > 0 ? <List list={item.Genres} /> : ''}
+      <Checkbox id={props.id} label={item.Name} selected={props.idsOfSelected.includes(props.id)} />
+      {Array.isArray(item.Genres) && item.Genres.length > 0 ? <List list={item.Genres} idsOfSelected={props.idsOfSelected} /> : ''}
     </li>
   );
 }
@@ -32,7 +32,7 @@ function List(props) {
   const list = props.list;
   const listItems = list.map((item) => {
     const id = item.ID || item.Name.replace(/\s/g,'');
-    return <ListItem key={id} id={id} item={item}/>
+    return <ListItem key={id} id={id} item={item} idsOfSelected={props.idsOfSelected} />
   });
   return (
     <ul>
@@ -45,7 +45,7 @@ class GenresSelector extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      nbOfSelections: 0,
+      idsOfSelected: props.idsOfSelected || [],
     };
   }
 
@@ -55,9 +55,12 @@ class GenresSelector extends React.Component {
         <header>
           <h1>What kind of music will you broadcast ?</h1>
           <p>(Select from 1 to {this.props.maximumNbOfSelections} genres maximum)</p>
-          <Feedback nbOfSelections={this.state.nbOfSelections} maximumNbOfSelections={this.props.maximumNbOfSelections} />
+          <Feedback
+            nbOfSelections={this.state.idsOfSelected.length}
+            maximumNbOfSelections={this.props.maximumNbOfSelections}
+          />
         </header>
-        <List list={this.props.genres} />
+        <List list={this.props.genres} idsOfSelected={this.state.idsOfSelected} />
       </article>
     );
   }

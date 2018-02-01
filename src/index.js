@@ -12,18 +12,39 @@ function Feedback(props) {
   return <p>{props.nbOfSelections} genre{props.nbOfSelections > 1 ? 's':''} selected</p>;
 }
 
-function Checkbox(props) {
-  return (
-    <label><input type="checkbox" id={props.id} name="genres" value={props.id} defaultChecked={props.selected} />{props.label}</label>
-  );
+class Checkbox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    this.props.onClick(e.target.id);
+  }
+
+  render() {
+    return (
+      <label>
+        <input
+          type="checkbox"
+          id={this.props.id}
+          name="genres"
+          value={this.props.id}
+          defaultChecked={this.props.selected}
+          onClick={this.handleClick}
+        />
+        {this.props.label}
+      </label>
+    );
+  }
 }
 
 function ListItem(props) {
   const item = props.item;
   return (
     <li>
-      <Checkbox id={props.id} label={item.Name} selected={props.idsOfSelected.includes(props.id)} />
-      {Array.isArray(item.Genres) && item.Genres.length > 0 ? <List list={item.Genres} idsOfSelected={props.idsOfSelected} /> : ''}
+      <Checkbox id={props.id} label={item.Name} selected={props.idsOfSelected.includes(props.id)} onClick={props.onClick} />
+      {Array.isArray(item.Genres) && item.Genres.length > 0 ? <List list={item.Genres} idsOfSelected={props.idsOfSelected} onClick={props.onClick} /> : ''}
     </li>
   );
 }
@@ -32,7 +53,13 @@ function List(props) {
   const list = props.list;
   const listItems = list.map((item) => {
     const id = item.ID || item.Name.replace(/\s/g,'');
-    return <ListItem key={id} id={id} item={item} idsOfSelected={props.idsOfSelected} />
+    return <ListItem
+      key={id}
+      id={id}
+      item={item}
+      idsOfSelected={props.idsOfSelected}
+      onClick={props.onClick}
+    />
   });
   return (
     <ul>
@@ -44,9 +71,22 @@ function List(props) {
 class GenresSelector extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
     this.state = {
       idsOfSelected: props.idsOfSelected || [],
     };
+  }
+
+  handleClick(id) {
+    const idsOfSelected = this.state.idsOfSelected.slice();
+    const idValid = (+id) || id; // Convert String id to Number if possible. +"123" => 123
+    const index = idsOfSelected.indexOf(idValid);
+    if (-1 !== index) {
+      idsOfSelected.splice(index, 1);
+    } else (
+      idsOfSelected.push(idValid)
+    );
+    this.setState({idsOfSelected: idsOfSelected});
   }
 
   render() {
@@ -60,7 +100,11 @@ class GenresSelector extends React.Component {
             maximumNbOfSelections={this.props.maximumNbOfSelections}
           />
         </header>
-        <List list={this.props.genres} idsOfSelected={this.state.idsOfSelected} />
+        <List
+          list={this.props.genres}
+          idsOfSelected={this.state.idsOfSelected}
+          onClick={this.handleClick}
+        />
       </article>
     );
   }

@@ -1,3 +1,5 @@
-.is-hidden {
-  display: none;
-}
+@import "src/sass/_reboot.scss"; // Bootstrap reboot (basic reset)
+@import "src/sass/_variables.scss";
+@import "src/sass/_base.scss";
+@import "src/sass/_utilities.scss";
+@import "src/sass/_layout.scss";

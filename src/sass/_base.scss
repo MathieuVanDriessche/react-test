@@ -1,0 +1,69 @@
+/* ----------------------------- */
+/* ==Base (basic styles)         */
+/* ----------------------------- */
+
+/* switching to border-box model for all elements */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* avoid min-width: auto on flex and grid children */
+  min-width: 0;
+  min-height: 0;
+}
+
+html {
+  /* set base font-size to equiv "10px", which is adapted to rem unit */
+  font-size: 62.5%;
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+  font-size: calc(1em * 0.625);
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;;
+  background-color: $background-base;
+  color: $color-base;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+/* Max values */
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video,
+svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+img {
+  vertical-align: middle;
+}
+
+em,
+.italic,
+address,
+cite,
+i,
+var {
+  font-style: italic;
+}

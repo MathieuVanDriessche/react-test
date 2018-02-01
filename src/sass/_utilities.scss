@@ -1,0 +1,27 @@
+/* invisible for all */
+.is-hidden,
+.js-hidden,
+[hidden] {
+  display: none;
+}
+
+/* hidden but not for an assistive technology like a screen reader, Yahoo! method */
+.visually-hidden {
+  position: absolute !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+
+.is-disabled,
+.js-disabled,
+[disabled],
+.is-disabled ~ label,
+[disabled] ~ label {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+  filter: grayscale(1);
+}

@@ -4,7 +4,10 @@ import musicGenres from '../src/mocks/music_genres'
 import '../src/css/styles.css'
 
 function Feedback(props) {
-  if (props.nbOfSelections === 0) {
+  if (!props.afterFirstSelect) {
+    return <p className="feedback">No genre selected</p>;
+  }
+  if (0 === props.nbOfSelections) {
     return <p className="feedback feedback--error"><strong>You must select at least one genre!</strong></p>;
   }
   if (props.nbOfSelections > props.maximumNbOfSelections) {
@@ -84,14 +87,17 @@ class Fieldset extends React.Component {
 
 class GenresSelector extends React.Component {
   constructor(props) {
+    const idsOfSelectedIsArray = Array.isArray(props.idsOfSelected);
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
-      idsOfSelected: props.idsOfSelected || [],
+      idsOfSelected: idsOfSelectedIsArray ? props.idsOfSelected : [],
+      afterFirstSelect: !!(idsOfSelectedIsArray && props.idsOfSelected.length)
     };
   }
 
   handleClick(id) {
+    this.setState({afterFirstSelect: true});
     const idsOfSelected = this.state.idsOfSelected.slice();
     const idValid = (+id) || id; // Convert String id to Number if possible. +"123" => 123
     const index = idsOfSelected.indexOf(idValid);
@@ -110,6 +116,7 @@ class GenresSelector extends React.Component {
           <h1 className="genresSelector__title">What kind of music will you broadcast?</h1>
           <p className="genresSelector__instruction">(Select from 1 to {this.props.maximumNbOfSelections} genres maximum)</p>
           <Feedback
+            afterFirstSelect={this.state.afterFirstSelect}
             nbOfSelections={this.state.idsOfSelected.length}
             maximumNbOfSelections={this.props.maximumNbOfSelections}
           />
@@ -129,6 +136,6 @@ class GenresSelector extends React.Component {
 }
 
 ReactDOM.render(
-  <GenresSelector genres={musicGenres} maximumNbOfSelections="5" />,
+  <GenresSelector genres={musicGenres} maximumNbOfSelections="5" idsOfSelected={[]} />,
   document.getElementById('root')
 );

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import musicGenres from '../src/mocks/music_genres'
+import '../src/index.css'
 
 function Feedback(props) {
   if (props.nbOfSelections === 0) {
@@ -23,15 +24,18 @@ class Checkbox extends React.Component {
   }
 
   render() {
-    const {name, id, idsOfSelected} = this.props;
+    const {name, id, idsOfSelected, parentIsOpen} = this.props;
+    const checked = idsOfSelected.includes(id);
+    const isHidden = !checked && !parentIsOpen;
     return (
-      <p>
+      <p className={isHidden ? 'is-hidden' : ''}>
         <input
           type="checkbox"
           id={id}
           name="genres"
           value={id}
-          defaultChecked={idsOfSelected.includes(id)}
+          disabled={isHidden}
+          defaultChecked={checked}
           onClick={this.handleClick}
         />
         <label htmlFor={id}>
@@ -42,23 +46,40 @@ class Checkbox extends React.Component {
   }
 }
 
-function Fieldset(props) {
-  return (
-    <fieldset>
-      <legend>
-        {props.legend}
-      </legend>
-      {props.fields.map((field) =>
-        <Checkbox
-          key={field.ID}
-          id={field.ID}
-          name={field.Name}
-          idsOfSelected={props.idsOfSelected}
-          onClick={props.onClick}
-        />
-      )}
-    </fieldset>
-  );
+class Fieldset extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      isOpen: false,
+    };
+  }
+
+  handleClick() {
+    this.setState({isOpen: !this.state.isOpen});
+  }
+
+  render() {
+    return (
+      <fieldset>
+        <legend>
+          <button onClick={this.handleClick}>
+            {this.props.legend}
+          </button>
+        </legend>
+        {this.props.fields.map((field) =>
+          <Checkbox
+            key={field.ID}
+            id={field.ID}
+            name={field.Name}
+            idsOfSelected={this.props.idsOfSelected}
+            parentIsOpen={this.state.isOpen}
+            onClick={this.props.onClick}
+          />
+        )}
+      </fieldset>
+    );
+  };
 }
 
 class GenresSelector extends React.Component {

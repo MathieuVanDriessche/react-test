@@ -5,12 +5,12 @@ import '../src/css/styles.css'
 
 function Feedback(props) {
   if (props.nbOfSelections === 0) {
-    return <p><strong>You must select at least one genre!</strong></p>;
+    return <p className="feedback feedback--error"><strong>You must select at least one genre!</strong></p>;
   }
   if (props.nbOfSelections > props.maximumNbOfSelections) {
-    return <p><strong>You can only select up to {props.maximumNbOfSelections} genres!</strong></p>;
+    return <p className="feedback feedback--error"><strong>You can only select up to {props.maximumNbOfSelections} genres!</strong></p>;
   }
-  return <p>{props.nbOfSelections} genre{props.nbOfSelections > 1 ? 's':''} selected</p>;
+  return <p className="feedback">{props.nbOfSelections} genre{props.nbOfSelections > 1 ? 's':''} selected</p>;
 }
 
 class Checkbox extends React.Component {
@@ -105,10 +105,10 @@ class GenresSelector extends React.Component {
 
   render() {
     return (
-      <article>
-        <header>
-          <h1>What kind of music will you broadcast ?</h1>
-          <p>(Select from 1 to {this.props.maximumNbOfSelections} genres maximum)</p>
+      <article className="genresSelector">
+        <header className="genresSelector__header">
+          <h1 className="genresSelector__title">What kind of music will you broadcast?</h1>
+          <p className="genresSelector__instruction">(Select from 1 to {this.props.maximumNbOfSelections} genres maximum)</p>
           <Feedback
             nbOfSelections={this.state.idsOfSelected.length}
             maximumNbOfSelections={this.props.maximumNbOfSelections}

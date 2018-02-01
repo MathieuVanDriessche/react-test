@@ -1,0 +1,21 @@
+.genresSelector {
+  margin: 1em auto;
+  max-width: 1000px;
+}
+
+.genresSelector__header {
+  @extend .flex-container;
+}
+
+.genresSelector__title {
+  color: #696B70;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.genresSelector__instruction {
+  @extend .item-fluid;
+  color: #b4b5b7;
+  font-size: .9em;
+  padding: 0 1em;
+}

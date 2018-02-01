@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import musicGenres from '../src/mocks/music_genres'
-import '../src/index.css'
+import '../src/css/styles.css'
 
 function Feedback(props) {
   if (props.nbOfSelections === 0) {

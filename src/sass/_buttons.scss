@@ -1,0 +1,84 @@
+.btnContainer {
+  display: inline;
+}
+
+.btn,
+button {
+  display: inline-block;
+  padding: .5em 1em;
+  margin: 0 1em 1em 0;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.25s;
+  transition-property: box-shadow, background-color, color, border;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $color-base;
+  border-radius: 100px;
+  background-color: white;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  border: 1px solid #D9DEE8;
+  font-weight: 600;
+
+  [type="checkbox"]:focus + &,
+  &:focus,
+  &:hover {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15)
+  }
+
+}
+
+.btn--selected,
+.btn--parent--selected {
+  border-color: $color-success;
+  position: relative;
+
+  [type="checkbox"]:focus + &,
+  &:focus,
+  &:hover {
+    box-shadow: 0 3px 3px 0 rgba(41,186,229,0.31);
+  }
+}
+
+.btn--selected:after {
+  content: 'v';
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  border-radius: 100px;
+  background: #18B9E7;
+  color: white;
+  width: 15px;
+  height: 15px;
+  display: block;
+  font-size: 12px;
+  line-height: 1.1em;
+}
+
+.btn--selected--error,
+.btn--parent--selected--error {
+  border-color: $color-error;
+
+  [type="checkbox"]:focus + &,
+  &:focus,
+  &:hover {
+    box-shadow: 0 3px 3px 0 rgba(247,82,91,0.31);
+  }
+
+}
+
+.btn--selected--error:after {
+  content:'!';
+  background: #ef5050;
+  line-height: 1.2em;
+}
+
+.btn--parent::after {
+    content:' •••';
+}

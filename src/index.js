@@ -8,10 +8,10 @@ function Feedback(props) {
     return <p className="feedback">No genre selected</p>;
   }
   if (0 === props.nbOfSelections) {
-    return <p className="feedback feedback--error"><strong>You must select at least one genre!</strong></p>;
+    return <p className="feedback feedback--error">You must select at least one genre!</p>;
   }
   if (props.nbOfSelections > props.maximumNbOfSelections) {
-    return <p className="feedback feedback--error"><strong>You can only select up to {props.maximumNbOfSelections} genres!</strong></p>;
+    return <p className="feedback feedback--error">You can only select up to {props.maximumNbOfSelections} genres!</p>;
   }
   return <p className="feedback">{props.nbOfSelections} genre{props.nbOfSelections > 1 ? 's':''} selected</p>;
 }
@@ -26,13 +26,27 @@ class Checkbox extends React.Component {
     this.props.onClick(e.target.id);
   }
 
+  static getBtnClass(isHidden, selected, error) {
+    const className = ['btn'];
+    if (isHidden) {
+      className.push('is-hidden');
+    } else if (selected) {
+      className.push('btn--selected');
+      if (error) {
+        className.push('btn--selected--error');
+      }
+    }
+    return className.join(' ');
+  }
+
   render() {
-    const {name, id, idsOfSelected, parentIsOpen} = this.props;
+    const {name, id, idsOfSelected, maximumNbOfSelections, parentIsOpen} = this.props;
     const checked = idsOfSelected.includes(id);
     const isHidden = !checked && !parentIsOpen;
     return (
-      <p className={isHidden ? 'is-hidden' : ''}>
+      <p className="btnContainer">
         <input
+          className="visually-hidden"
           type="checkbox"
           id={id}
           name="genres"
@@ -41,7 +55,10 @@ class Checkbox extends React.Component {
           defaultChecked={checked}
           onClick={this.handleClick}
         />
-        <label htmlFor={id}>
+        <label
+          htmlFor={id}
+          className={Checkbox.getBtnClass(isHidden, checked, idsOfSelected.length > maximumNbOfSelections)}
+        >
           {name}
         </label>
       </p>
@@ -62,25 +79,40 @@ class Fieldset extends React.Component {
     this.setState({isOpen: !this.state.isOpen});
   }
 
+  getBtnStateClasses() {
+    const classes = ['btn btn--parent'];
+    if (this.state.isOpen) {
+      classes.push('btn--parent--selected');
+      if (this.props.idsOfSelected.length > this.props.maximumNbOfSelections) {
+        classes.push('btn--parent--selected--error');
+      }
+    }
+    return classes.join(' ');
+  }
+
   render() {
     return (
-      <fieldset>
-        <legend>
-          <button onClick={this.handleClick}>
+      <article className="genresGroup">
+        <h2 className="genresGroup__title">
+          <button
+            className={this.getBtnStateClasses()}
+            onClick={this.handleClick}
+          >
             {this.props.legend}
           </button>
-        </legend>
+        </h2>
         {this.props.fields.map((field) =>
           <Checkbox
             key={field.ID}
             id={field.ID}
             name={field.Name}
+            maximumNbOfSelections={this.props.maximumNbOfSelections}
             idsOfSelected={this.props.idsOfSelected}
             parentIsOpen={this.state.isOpen}
             onClick={this.props.onClick}
           />
         )}
-      </fieldset>
+      </article>
     );
   };
 }
@@ -126,6 +158,7 @@ class GenresSelector extends React.Component {
             key={fieldset.Name.replace(/\s/g,'')}
             legend={fieldset.Name}
             fields={fieldset.Genres}
+            maximumNbOfSelections={this.props.maximumNbOfSelections}
             idsOfSelected={this.state.idsOfSelected}
             onClick={this.handleClick}
           />

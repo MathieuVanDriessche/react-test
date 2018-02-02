@@ -2,7 +2,7 @@
 .is-hidden,
 .js-hidden,
 [hidden] {
-  display: none;
+  display: none !important;
 }
 
 /* hidden but not for an assistive technology like a screen reader, Yahoo! method */
